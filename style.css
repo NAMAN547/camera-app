@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#record,
+#capture {
+  z-index: 3;
+  height: 5rem;
+  margin: 10px;
+  width: 5rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  position: fixed;
+  border: 5px solid white;
+  background: black;
+}
+
+#record {
+  top: 60vh;
+  right: 20px;
+}
+
+#record::before{
+  content: "Record";
+  font-size: 24px;
+  color:white;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  
+}
+
+#capture::before{
+  content: "Capture";
+  font-size: 24px;
+  color:white;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  
+}
+
+#record div {
+  height: 60%;
+  width: 68%;
+  margin: auto;
+  border-radius: 50%;
+  background: red;
+}
+
+#capture div {
+  height: 60%;
+  width: 68%;
+  margin: auto;
+  border-radius: 50%;
+  background: white;
+}
+
+#capture {
+  top: 40vh;
+  right: 20px;
+}
+
+#video-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+.record-animation {
+  animation: zoom-in-out 0.8s infinite;
+}
+.capture-animation {
+  animation: zoom-in-out 1s;
+}
+
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.filter-container {
+  width: 6rem;
+margin-top: -70px;
+  height: 60vh;
+  position: fixed;
+  top: 20vh;
+  left: 20px;
+  z-index: 3;
+}
+
+.filter {
+  width: 100%;
+
+margin: 10px;
+  height: calc(100% / 6);
+  border: 1px solid white;
+  background-image: url(https://static.scientificamerican.com/sciam/cache/file/4E0744CD-793A-4EF8-B550B54F7F2C4406_source.jpg);
+  background-size: cover;
+}
+
+.filter-div {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+
+.zoom-container {
+  
+  height: 20vh;
+  width: 6rem;
+  border-radius: 20px;
+  position: fixed;
+  top: 5vh;
+  right: 20px;
+  z-index: 3;
+  margin: 5px;
+}
+
+.zoom-container div {
+
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  background: #57606f;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.zoom-in::before{
+  content: "Zoom-In";
+  font-size: 20px;
+  color:white;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+}
+
+.zoom-out::before{
+  content: "Zoom-Out";
+  font-size: 20px;
+  color:white;
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+
